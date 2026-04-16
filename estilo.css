@@ -1,0 +1,160 @@
+/* Paleta de Cores Atualizada - Estilo 'Torneio Premium' */
+:root {
+    --primary-color: #001a4a; 
+    --secondary-color: #c99f36; 
+    --accent-red: #8b0000;      
+    /* Gradiente que imita a iluminação de um estádio à noite */
+    --bg-gradient: radial-gradient(circle at center, #102a61 0%, #07153a 70%, #030a1e 100%);
+    --card-dark: rgba(255, 255, 255, 0.03); /* Vidro bem sutil */
+    --text-main: #ffffff;
+}
+
+body {
+    background: var(--bg-gradient);
+    background-attachment: fixed; /* O fundo não rola junto com a página */
+    color: var(--text-main);
+    min-height: 100vh;
+}
+
+/* Deixa a barra de navegação um pouco mais transparente para combinar */
+.nav-fifa {
+    background: rgba(0, 18, 51, 0.8) !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(201, 159, 54, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* --- MELHORIA NOS CARDS (Efeito Vidro Premium) --- */
+.card-grupo {
+    background: var(--card-dark) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 20px !important; /* Mais arredondado = mais moderno */
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+}
+
+.card-grupo header {
+    background: linear-gradient(135deg, #8b0000 0%, #5a0000 100%) !important;
+    color: var(--secondary-color) !important;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 15px;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+}
+
+/* Estilo para as estrelas brilharem mais */
+.stars {
+    color: var(--secondary-color);
+    text-shadow: 0 0 8px rgba(201, 159, 54, 0.8);
+}
+}
+
+/* Título mais encorpado */
+.title-section {
+    border-left: 8px solid var(--secondary-color);
+    padding-left: 20px;
+    font-weight: 900;
+    font-size: 2rem;
+    color: var(--text-main) !important;
+    letter-spacing: 1px;
+    margin-bottom: 2.5rem;
+}
+
+/* Grid de Grupos */
+.grid-grupos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* --- NOVO ESTILO DOS CARDS --- */
+.card-grupo {
+    background: var(--card-dark) !important;
+    border: 2px solid rgba(201, 159, 54, 0.15) !important; /* Bordas douradas sutis */
+    border-radius: 16px !important;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px); /* Efeito Glassmorphism */
+}
+
+.card-grupo:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+    border: 2px solid rgba(201, 159, 54, 0.4) !important; /* Brilha no hover */
+}
+
+/* Cabeçalho do Grupo - Vermelho e Ouro */
+.card-grupo header {
+    background: var(--accent-red) !important; /* Destaque em Vermelho */
+    color: var(--secondary-color) !important; /* Texto em Dourado */
+    font-weight: 900;
+    text-align: center;
+    padding: 15px;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+/* Tabela interna do Card */
+.card-grupo table {
+    margin-bottom: 0;
+    background: transparent;
+}
+
+.card-grupo td {
+    border-bottom: 1px solid rgba(255,255,255,0.05); /* Linhas divisórias sutis */
+    padding: 18px !important;
+}
+
+/* Nome da Seleção e Estrelas */
+.team-info strong {
+    color: var(--text-main) !important; /* Texto branco no card escuro */
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.stars {
+    color: var(--secondary-color); /* Estrelas Douradas */
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Botão de Excluir - Mais elegante */
+.btn-mini-excluir {
+    color: var(--text-muted) !important;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: color 0.2s;
+    font-weight: bold;
+}
+
+.btn-mini-excluir:hover {
+    color: var(--accent-red) !important;
+}
+
+/* Ajuste dos Textos Soltos que apareceram na imagem */
+main > div, main > small {
+    color: var(--text-muted) !important;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+}
+.footer-fifa {
+    display: flex; /* Ativa o flexbox */
+    flex-direction: column; /* Coloca um texto embaixo do outro */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center; /* Garante que o texto em si esteja centralizado */
+    padding: 3rem 1rem;
+    margin-top: 5rem;
+    color: rgba(255, 255, 255, 0.6) !important; /* Deixa o texto do rodapé mais suave */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Linha divisória bem discreta */
+    width: 100%; /* Garante que ocupe a largura toda para poder centralizar */
+}
+
+.footer-fifa p, .footer-fifa small {
+    margin-bottom: 0.5rem; /* Espaçamento entre as frases */
+}
